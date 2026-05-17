@@ -1,0 +1,7 @@
+PROMPT="%(?:%B%F{196}>> :%B%F{196}>> )%F{15}%c%f%b"
+PROMPT+=' $(git_prompt_info)'
+
+ZSH_THEME_GIT_PROMPT_PREFIX="%B%F{15}git:(%F{196}"
+ZSH_THEME_GIT_PROMPT_SUFFIX="%f%b "
+ZSH_THEME_GIT_PROMPT_DIRTY="%F{15}) %B%F{196}✗%f%b"
+ZSH_THEME_GIT_PROMPT_CLEAN="%F{15})%f%b"

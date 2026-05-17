@@ -1,0 +1,7 @@
+alias ll='eza -l -g --icons --color=always'
+alias lla='eza -l -g -a --icons --color=always'
+alias ls='eza -F --icons --color=always'
+alias lg='lazygit'
+alias la='ls -A'
+alias g='git'
+alias vim='nvim'

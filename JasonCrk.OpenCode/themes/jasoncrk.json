@@ -1,0 +1,74 @@
+{
+  "$schema": "https://opencode.ai/theme.json",
+  "defs": {
+    "red": "#DE0000",
+    "white": "#FFFFFF",
+    "blackRed": "#050000",
+    "none": "none"
+  },
+  "theme": {
+    "primary": "red",
+    "secondary": "red",
+    "accent": "red",
+
+    "selectedListItemText": "white",
+
+    "error": "red",
+    "warning": "red",
+    "success": "white",
+    "info": "white",
+
+    "text": "white",
+    "textMuted": "#ADADAD",
+
+    "background": "none",
+    "backgroundPanel": "blackRed",
+    "backgroundElement": "blackRed",
+    "backgroundMenu": "blackRed",
+
+    "border": "red",
+    "borderActive": "red",
+    "borderSubtle": "blackRed",
+
+    "diffAdded": "white",
+    "diffRemoved": "red",
+    "diffContext": "white",
+    "diffHunkHeader": "red",
+
+    "diffHighlightAdded": "white",
+    "diffHighlightRemoved": "red",
+
+    "diffAddedBg": "blackRed",
+    "diffRemovedBg": "blackRed",
+    "diffContextBg": "none",
+
+    "diffLineNumber": "white",
+    "diffAddedLineNumberBg": "blackRed",
+    "diffRemovedLineNumberBg": "blackRed",
+
+    "markdownText": "white",
+    "markdownHeading": "red",
+    "markdownLink": "red",
+    "markdownLinkText": "white",
+    "markdownCode": "red",
+    "markdownBlockQuote": "#ADADAD",
+    "markdownEmph": "red",
+    "markdownStrong": "white",
+    "markdownHorizontalRule": "red",
+    "markdownListItem": "red",
+    "markdownListEnumeration": "red",
+    "markdownImage": "red",
+    "markdownImageText": "white",
+    "markdownCodeBlock": "white",
+
+    "syntaxComment": "#ADADAD",
+    "syntaxKeyword": "red",
+    "syntaxFunction": "red",
+    "syntaxVariable": "white",
+    "syntaxString": "white",
+    "syntaxNumber": "red",
+    "syntaxType": "red",
+    "syntaxOperator": "red",
+    "syntaxPunctuation": "white"
+  }
+}

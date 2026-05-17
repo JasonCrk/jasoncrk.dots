@@ -1,0 +1,30 @@
+shell-integration = zsh
+shell-integration-features = no-cursor,no-sudo,title
+
+macos-titlebar-style = hidden
+window-decoration = false
+window-padding-balance = true
+window-colorspace = display-p3
+mouse-hide-while-typing = true
+mouse-scroll-multiplier = 2
+window-height = 300
+window-width = 300
+
+cursor-style = block
+cursor-style-blink = false
+
+background = #060000
+background-opacity = 0.8
+
+font-family = "JetBrains Mono"
+font-size = 9.5
+font-thicken = true
+
+clipboard-read = allow
+clipboard-write = allow
+
+#keybind = global:cmd+ctrl+shift+j=toggle_visibility
+
+macos-option-as-alt = left
+keybind = alt+left=unbind
+keybind = alt+right=unbind
