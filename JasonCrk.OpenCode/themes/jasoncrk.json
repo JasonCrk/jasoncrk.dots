@@ -7,9 +7,9 @@
     "none": "none"
   },
   "theme": {
-    "primary": "red",
+    "primary": "#DE0000",
     "secondary": "red",
-    "accent": "red",
+    "accent": "#050000",
 
     "selectedListItemText": "white",
 
@@ -23,7 +23,7 @@
 
     "background": "none",
     "backgroundPanel": "blackRed",
-    "backgroundElement": "blackRed",
+    "backgroundElement": "#050000",
     "backgroundMenu": "blackRed",
 
     "border": "red",
@@ -47,28 +47,28 @@
     "diffRemovedLineNumberBg": "blackRed",
 
     "markdownText": "white",
-    "markdownHeading": "red",
     "markdownLink": "red",
     "markdownLinkText": "white",
-    "markdownCode": "red",
     "markdownBlockQuote": "#ADADAD",
-    "markdownEmph": "red",
     "markdownStrong": "white",
     "markdownHorizontalRule": "red",
-    "markdownListItem": "red",
-    "markdownListEnumeration": "red",
     "markdownImage": "red",
     "markdownImageText": "white",
     "markdownCodeBlock": "white",
+    "markdownCode": "white",
+    "markdownHeading": "white",
+    "markdownEmph": "white",
+    "markdownListItem": "white",
+    "markdownListEnumeration": "white",
 
+    "syntaxKeyword": "white",
+    "syntaxFunction": "white",
+    "syntaxNumber": "white",
+    "syntaxType": "white",
+    "syntaxOperator": "white",
     "syntaxComment": "#ADADAD",
-    "syntaxKeyword": "red",
-    "syntaxFunction": "red",
     "syntaxVariable": "white",
     "syntaxString": "white",
-    "syntaxNumber": "red",
-    "syntaxType": "red",
-    "syntaxOperator": "red",
     "syntaxPunctuation": "white"
   }
 }
