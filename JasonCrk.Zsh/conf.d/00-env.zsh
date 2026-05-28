@@ -2,6 +2,7 @@ RED='1;38;5;196'
 WHITE='97'
 
 EZA_COLORS="reset"
+PROMPT_EOL_MARK=''
 
 # Archivos, carpetas, links, iconos y tipos de archivo: rojo
 EZA_COLORS+=":fi=${RED}:di=${RED}:ex=${RED}:ln=${RED}:or=${RED}:mi=${RED}"
@@ -33,8 +34,7 @@ EZA_COLORS+=":ff=${WHITE}:Sn=${WHITE}:Su=${WHITE}:Sr=${WHITE}:St=${WHITE}:Sl=${W
 
 export EZA_COLORS
 
-export PNPM_HOME="/home/jasoncrk/.local/share/pnpm"
-case ":$PATH:" in
-  *":$PNPM_HOME:"*) ;;
-  *) export PATH="$PNPM_HOME:$PATH" ;;
-esac
+export DOCKER_HOST=unix://$XDG_RUNTIME_DIR/docker.sock
+
+export BUN_INSTALL="$HOME/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"

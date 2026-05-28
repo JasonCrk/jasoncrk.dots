@@ -1,5 +1,7 @@
 zmodload zsh/complist 2>/dev/null
 
+[ -s "/home/jasoncrk/.bun/_bun" ] && source "/home/jasoncrk/.bun/_bun"
+
 zstyle ':completion:*' list-colors \
   'no=97' \
   'fi=97' \

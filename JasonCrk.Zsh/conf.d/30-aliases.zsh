@@ -5,3 +5,8 @@ alias lg='lazygit'
 alias la='ls -A'
 alias g='git'
 alias vim='nvim'
+
+alias dkstart='systemctl --user start docker.service'
+alias dkstop='systemctl --user stop docker.service docker.socket'
+alias dkstatus='systemctl --user status docker.service'
+alias dktoggle='dkr toggle'
