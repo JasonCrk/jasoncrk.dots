@@ -1,0 +1,99 @@
+[core]
+    editor = nvim
+    ignorecase = false
+    excludesfile = ~/.gitignore
+    pager = delta
+
+[user]
+    username = JasonCrk
+    email = 73272783+JasonCrk@users.noreply.github.com
+    name = JasonCrk
+
+[interactive]
+    diffFilter = delta --color-only
+
+[pull]
+    rebase = false
+
+[init]
+	defaultBranch = main
+
+[push]
+    default = simple
+
+[color]
+    status = auto
+    diff = auto
+    branch = auto
+    interactive = auto
+    grep = auto
+    ui = auto
+
+[alias]
+    a = "!git status --short | peco | awk '{print $2}' | xargs git add"
+    d = diff
+    co = checkout
+    ci = commit
+    ca = commit -a
+    cc = "!cz --config /home/jasoncrk/.config/commitizen/cz.toml commit"
+    ps = "!git push origin $(git rev-parse --abbrev-ref HEAD)"
+    pl = "!git pull origin $(git rev-parse --abbrev-ref HEAD)"
+    lgs = "log --graph --abbrev-commit --decorate --pretty=format:'%C(#A80000)%h%C(reset) %C(#F01313)%d%C(reset) %C(bold #ffffff)%s%C(reset) %C(#999999)- %an, %ar%C(reset)' --all"
+    st = status
+    br = branch
+    ba = branch -a
+    bm = branch --merged
+    bn = branch --no-merged
+    df = "!git hist | peco | awk '{print $2}' | xargs -I {} git diff {}^ {}"
+    hist = log --pretty=format:\"%Cgreen%h %Creset%cd %Cblue[%cn] %Creset%s%C(yellow)%d%C(reset)\" --graph --date=relative --decorate --all
+    llog = log --graph --name-status --pretty=format:\"%C(red)%h %C(reset)(%cd) %C(green)%an %Creset%s %C(yellow)%d%Creset\" --date=relative
+    open = "!hub browse"
+    type = cat-file -t
+    dump = cat-file -p
+    find = "!f() { git log --pretty=format:\"%h %cd [%cn] %s%d\" --date=relative -S'pretty' -S\"$@\" | peco | awk '{print $1}' | xargs -I {} git diff {}^ {}; }; f"
+    edit-unmerged = "!f() { git ls-files --unmerged | cut -f2 | sort -u ; }; vim `f`"
+    add-unmerged = "!f() { git ls-files --unmerged | cut -f2 | sort -u ; }; git add `f`"
+
+[hub]
+    protocol = https
+
+[github]
+	user = jasoncrk
+
+[diff]
+    tool = nvimdiff
+
+[difftool "nvimdiff"]
+	cmd = nvim -d \"$LOCAL\" \"$REMOTE\"
+	path =
+
+[mergetool "nvimdiff"]
+	cmd = nvim -d \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+	trustExitCode = true
+
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	required = true
+	process = git-lfs filter-process
+
+[delta]
+    features = corvus
+    navigate = true
+    side-by-side = false
+    line-numbers = true
+
+    file-style = "#949494"
+    file-decoration-style = none
+    hunk-header-style = file line-number syntax
+    hunk-header-file-style = "#949494"
+
+[merge]
+    conflictStyle = zdiff3
+
+[diff]
+    colorMoved = default
+    algorithm = histogram
+
+[include]
+    path = ~/.config/delta/themes.gitconfig
