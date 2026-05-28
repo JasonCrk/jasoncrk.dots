@@ -1,0 +1,110 @@
+[tool.commitizen]
+name = "cz_customize"
+
+style = [
+  ["qmark", "fg:#F01313 bold"],
+  ["question", "fg:#FFFFFF bold"],
+  ["answer", "fg:#F01313 bold"],
+  ["pointer", "fg:#F01313 bold"],
+  ["highlighted", "fg:#F01313 bold"],
+  ["selected", "fg:#FFFFFF bold"],
+  ["separator", "fg:#999999"],
+  ["instruction", "fg:#999999"],
+  ["text", "fg:#FFFFFF"],
+  ["disabled", "fg:#999999 italic"]
+]
+
+[tool.commitizen.customize]
+message_template = """{{change_type}}{% if scope %}({{scope}}){% endif %}{% if is_breaking_change %}!{% endif %}: {{message}}{% if body %}
+
+{{body}}{% endif %}{% if breaking_change %}
+
+BREAKING CHANGE: {{breaking_change}}{% endif %}{% if footer %}
+
+{{footer}}{% endif %}"""
+
+schema = "<type>(<scope>)!: <message>\n\n<body>\n\n<footer>"
+schema_pattern = "^(feat|fix|docs|style|refactor|perf|test|build|ci|chore|revert|deps|config|release|infra|db|ui|content|security|assets)(\\(.+\\))?(!)?: .+"
+
+bump_pattern = "BREAKING CHANGE|^(feat|fix|perf)"
+bump_map = { "BREAKING CHANGE" = "MAJOR", "feat" = "MINOR", "fix" = "PATCH", "perf" = "PATCH" }
+
+change_type_order = [
+  "feat",
+  "fix",
+  "perf",
+  "security",
+  "refactor",
+  "docs",
+  "style",
+  "test",
+  "build",
+  "ci",
+  "chore",
+  "deps",
+  "config",
+  "infra",
+  "db",
+  "ui",
+  "assets",
+  "content",
+  "release",
+  "revert"
+]
+
+[[tool.commitizen.customize.questions]]
+type = "select"
+name = "change_type"
+message = "Select the type of change you are committing"
+use_search_filter = true
+use_jk_keys = false
+use_arrow_keys = true
+use_shortcuts = true
+choices = [
+  { value = "feat", name = "feat: A new feature", key = "f" },
+  { value = "fix", name = "fix: A bug fix", key = "x" },
+  { value = "docs", name = "docs: Documentation only changes", key = "d" },
+  { value = "style", name = "style: Code style changes, formatting, missing semicolons, etc.", key = "s" },
+  { value = "refactor", name = "refactor: A code change that neither fixes a bug nor adds a feature", key = "r" },
+  { value = "perf", name = "perf: A code change that improves performance", key = "p" },
+  { value = "test", name = "test: Adding or correcting tests", key = "t" },
+  { value = "build", name = "build: Changes that affect the build system or external dependencies", key = "b" },
+  { value = "ci", name = "ci: Changes to CI configuration files and scripts", key = "c" },
+  { value = "chore", name = "chore: Other maintenance changes", key = "h" },
+  { value = "revert", name = "revert: Revert a previous commit", key = "v" },
+  { value = "deps", name = "deps: Dependency updates", key = "e" },
+  { value = "config", name = "config: Configuration changes", key = "g" },
+  { value = "release", name = "release: Versioning or changelog changes", key = "l" },
+  { value = "infra", name = "infra: Infrastructure, deployment, Docker, cloud, or server changes", key = "i" },
+  { value = "security", name = "security: Security fixes, vulnerabilities, permissions, or access control", key = "y" },
+  { value = "db", name = "db: Database schema, migrations, seeds, or queries", key = "1" },
+  { value = "ui", name = "ui: Visual interface changes", key = "u" },
+  { value = "assets", name = "assets: Images, icons, fonts, media, or static files", key = "a" },
+  { value = "content", name = "content: Copy, text, images, or content updates", key = "n" }
+]
+
+[[tool.commitizen.customize.questions]]
+type = "input"
+name = "scope"
+message = "What is the scope of this change?: (press [enter] to skip)"
+
+[[tool.commitizen.customize.questions]]
+type = "input"
+name = "message"
+message = "Write a short and imperative summary of the code changes:"
+
+[[tool.commitizen.customize.questions]]
+type = "input"
+name = "body"
+message = "Provide additional contextual information about the code changes"
+multiline = true
+
+[[tool.commitizen.customize.questions]]
+type = "input"
+name = "breaking_change"
+message = "Breaking change. Information about Breaking Changes: (press [enter] to skip)"
+
+[[tool.commitizen.customize.questions]]
+type = "input"
+name = "footer"
+message = "Footer. Information about reference issues that this commit closes: (press [enter] to skip)"
