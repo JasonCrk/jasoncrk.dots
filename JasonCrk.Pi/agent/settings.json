@@ -1,0 +1,19 @@
+{
+  "defaultModel": "gpt-5.3-codex",
+  "defaultProvider": "openai-codex",
+  "defaultThinkingLevel": "medium",
+  "lastChangelogVersion": "0.75.5",
+  "packages": [
+    "npm:gentle-pi",
+    "npm:gentle-engram@0.1.7",
+    "npm:pi-subagents",
+    "npm:pi-intercom",
+    "npm:@juicesharp/rpiv-ask-user-question",
+    "npm:pi-web-access",
+    "npm:pi-lens",
+    "npm:@juicesharp/rpiv-todo",
+    "npm:pi-btw",
+    "npm:pi-mcp-adapter"
+  ],
+  "theme": "jasoncrk"
+}

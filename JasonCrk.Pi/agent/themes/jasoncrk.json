@@ -1,0 +1,79 @@
+{
+  "$schema": "https://raw.githubusercontent.com/earendil-works/pi/main/packages/coding-agent/src/modes/interactive/theme/theme-schema.json",
+  "name": "jasoncrk",
+  "vars": {
+    "red": "#DE0000",
+    "white": "#FFFFFF",
+    "blackRed": "#050000",
+    "deepRed": "#160000",
+    "softRed": "#2A0000",
+    "mutedGray": "#ADADAD",
+    "darkGray": "#8A8A8A"
+  },
+  "colors": {
+    "accent": "red",
+    "border": "red",
+    "borderAccent": "red",
+    "borderMuted": "blackRed",
+
+    "success": "white",
+    "error": "red",
+    "warning": "red",
+    "muted": "mutedGray",
+    "dim": "darkGray",
+    "text": "white",
+    "thinkingText": "mutedGray",
+
+    "selectedBg": "softRed",
+    "userMessageBg": "blackRed",
+    "userMessageText": "white",
+    "customMessageBg": "blackRed",
+    "customMessageText": "white",
+    "customMessageLabel": "red",
+
+    "toolPendingBg": "blackRed",
+    "toolSuccessBg": "blackRed",
+    "toolErrorBg": "deepRed",
+    "toolTitle": "red",
+    "toolOutput": "white",
+
+    "mdHeading": "white",
+    "mdLink": "red",
+    "mdLinkUrl": "mutedGray",
+    "mdCode": "white",
+    "mdCodeBlock": "white",
+    "mdCodeBlockBorder": "red",
+    "mdQuote": "mutedGray",
+    "mdQuoteBorder": "red",
+    "mdHr": "red",
+    "mdListBullet": "red",
+
+    "toolDiffAdded": "white",
+    "toolDiffRemoved": "red",
+    "toolDiffContext": "mutedGray",
+
+    "syntaxComment": "mutedGray",
+    "syntaxKeyword": "white",
+    "syntaxFunction": "white",
+    "syntaxVariable": "white",
+    "syntaxString": "white",
+    "syntaxNumber": "white",
+    "syntaxType": "white",
+    "syntaxOperator": "red",
+    "syntaxPunctuation": "mutedGray",
+
+    "thinkingOff": "blackRed",
+    "thinkingMinimal": "mutedGray",
+    "thinkingLow": "red",
+    "thinkingMedium": "red",
+    "thinkingHigh": "red",
+    "thinkingXhigh": "red",
+
+    "bashMode": "red"
+  },
+  "export": {
+    "pageBg": "#050000",
+    "cardBg": "#160000",
+    "infoBg": "#2A0000"
+  }
+}

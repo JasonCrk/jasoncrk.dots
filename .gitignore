@@ -1,0 +1,14 @@
+JasonCrk.Pi/gentle-ai/
+JasonCrk.Pi/npm/
+JasonCrk.Pi/skills
+
+JasonCrk.Pi/agent/bin
+JasonCrk.Pi/agent/agents
+JasonCrk.Pi/agent/chains
+JasonCrk.Pi/agent/gentle-ai
+JasonCrk.Pi/agent/intercom
+JasonCrk.Pi/agent/npm
+JasonCrk.Pi/agent/sessions
+JasonCrk.Pi/agent/auth.json
+JasonCrk.Pi/agent/mcp-cache.json
+JasonCrk.Pi/agent/mcp.json
